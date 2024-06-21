@@ -1,8 +1,8 @@
-import "./App.css";
-import { a, b } from "./components/Products/Products";
-import Products from "./components/Products/Products";
-import { useState } from "react";
-import CartContext from "./context/CartContext";
+import './App.css';
+import { a, b } from './components/Products/Products';
+import Products from './components/Products/Products';
+import { useState } from 'react';
+import CartContext from './context/CartContext';
 function App() {
   // state variable
   // inc
@@ -14,7 +14,7 @@ function App() {
     if (!newCart[product.id]) {
       newCart[product.id] = {
         ...product,
-        quantity: 0,
+        quantity: 0
       };
     }
     newCart[product.id].quantity += 1;
@@ -34,10 +34,10 @@ function App() {
 
   console.log(a, b);
   return (
-    <CartContext.Provider value={{ cart, increaseQuantity, decreaseQuantity }}>
-        <div className="App">
-        <Products cart={cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />
-        </div>
+    <CartContext.Provider value={{ cart, increaseQuantity, decreaseQuantity}}>
+      <div className="App">
+        <Products  />
+      </div>
     </CartContext.Provider>
   );
 }
@@ -55,3 +55,5 @@ export default App;
 
 // a => 1234
 // a => 12
+
+// {cart: cart, increaseQuantity: increaseQuantity}
