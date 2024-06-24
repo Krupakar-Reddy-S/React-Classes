@@ -57,3 +57,18 @@ export default App;
 // a => 12
 
 // {cart: cart, increaseQuantity: increaseQuantity}
+
+
+// Global Parent
+// Global state
+// way to manipulate the state
+// way to consume the state
+
+
+//  Provider
+//  Store
+    // State
+    // Reducer
+// Action
+// Dispatcher
+// Selectors
